@@ -1,0 +1,43 @@
+<html>
+
+<head>
+
+    <title>
+        {{username}} - home 
+    </title>
+</head>
+
+<body>
+        {% for message in get_flashed_messages() %}
+
+        {{message}}
+       
+        {% endfor %}
+    <link rel="stylesheet" type="text/css"  href="{{ url_for('static',filename='assets/home_css.css')}}"> 
+<center>
+
+<h1> welcome {{username}}</h1>
+<textarea name ="note" form ="save_form" id="note"></textarea> <br> <br>
+<form name = "save_note" action="/save_note" method='POST' id="save_form">
+
+
+<input type ="submit" value="UPLOAD" name ="UPLOAD" id="upload">
+
+</form>
+
+<form name="logout" action="/logout" id ="logout" method='POST'>
+    <input type ="submit"d value="logout" name ="UPLOAD" id="logout">
+</form>
+
+<form name="show" action="/show" id ="show" method='POST'>
+    <input type ="submit" value="My notes" name ="UPLOAD" id="mynotes">
+</form>
+
+</form>
+
+</center>
+
+
+
+</body>
+</html>

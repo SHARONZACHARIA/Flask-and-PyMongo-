@@ -1,0 +1,26 @@
+
+    
+<body bgcoclor = "grey">
+       <link rel="stylesheet" type="text/css"  href="{{ url_for('static',filename='assets/style.css')}}"> 
+
+
+       {% for message in get_flashed_messages() %}
+
+  {{message}}
+ 
+  {% endfor %}
+      <div class="register-form">
+          <div class="form">
+            <form class="register-form"  action="/register_user" method="POST">
+              <input type="text" placeholder="name" id="uname" name="uname"/>
+              <input type="password" placeholder="password" id ="pass" name="pass"/>
+              <input type="text" placeholder="email address" id="email" name="email"/>
+             
+              <input type ="submit" value="CREATE">
+              <p class="message">Already registered? <a href="/home">Sign In</a></p>
+            </form>
+          </div>
+        </div>
+      </body>
+      
+      

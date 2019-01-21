@@ -1,0 +1,26 @@
+
+    
+<body bgcoclor = "grey">
+  <link rel="stylesheet" type="text/css"  href="{{ url_for('static',filename='assets/style.css')}}"> 
+
+{% for message in get_flashed_messages() %}
+
+  {{message}}
+ 
+  {% endfor %}
+
+
+<div class="login-page">
+    <div class="form">
+      
+     <form class="login-form" name="login" action="/login" method="POST">
+        <input type="text" placeholder="username" id="uname" name="uname"/>
+        <input type="password" placeholder="password" id="pass" name="pass"/>
+        <input type = "submit" value="LOGIN">
+    
+        <p class="message">Not registered?<a href="/register">Create an account</a></p>
+      </form>
+    </div>
+  </div>
+</body>
+
