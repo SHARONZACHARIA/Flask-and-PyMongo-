@@ -10,9 +10,9 @@ app.static_folder ='static'
 app.secret_key='secret_key'
 
 client = MongoClient("mongodb://127.0.0.1:27017") #host uri  
-db = client.mymessagedb   #Select the database  
-msg = db.messages
-notes = db.note
+#db = client.mymessagedb   #Select the database  
+#msg = db.messages
+#notes = db.note
 
 
 @app.route("/")
