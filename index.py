@@ -9,7 +9,7 @@ app = Flask(__name__)
 app.static_folder ='static'
 app.secret_key='secret_key'
 
-client = MongoClient("mongodb://Sharonz:reptilefree1@ds151864.mlab.com:51864/mymessagedb") #host uri  
+client = MongoClient(os.environ.get('MONGODB')) #host uri  
 db = client.mymessagedb   #Select the database  
 msg = db.messages
 notes = db.note
